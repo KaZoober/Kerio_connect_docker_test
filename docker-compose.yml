@@ -1,0 +1,28 @@
+version: '3'
+services:
+    connect:
+        build: ./build/old/
+        container_name: connect
+        ports:
+            - "22:22"
+            - "80:80"
+            - "443:443"
+            - "4040:4040"
+            - "25:25"
+            - "465:465"
+            - "587:587"
+            - "110:110"
+            - "995:995"
+            - "143:143"
+            - "993:993"
+            - "119:119"
+            - "563:563"
+            - "389:389"
+            - "636:636"
+            - "5222:5222"
+            - "5223:5223"
+        restart: always
+        volumes:
+            - "test:/opt/kerio"
+volumes:
+    test:
